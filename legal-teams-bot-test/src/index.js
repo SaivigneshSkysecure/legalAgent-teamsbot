@@ -1,4 +1,7 @@
 // Import required packages
+// Load environment variables from .env file
+require('dotenv').config({ path: '../../.env' });
+
 const express = require("express");
 
 // This bot's adapter

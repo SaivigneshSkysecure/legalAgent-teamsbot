@@ -17,9 +17,9 @@ const {
 } = require("@microsoft/teams-ai");
 
 // ✅ Setup Azure Graph Auth
-const tenantId = "547b64a7-e66e-48df-a146-3e898cbcb60f";
-const clientId = "f42f0803-e676-458d-9085-a807112769ac";
-const clientSecret = "VTV8Q~HTOOg~nPo6q0B7Xqjn7vxr45FnUm8jdc_Y";
+const tenantId = process.env.TENANT_ID || "";
+const clientId = process.env.CLIENT_ID || "";
+const clientSecret = process.env.CLIENT_SECRET || "";
 const credential = new ClientSecretCredential(tenantId, clientId, clientSecret);
 
 // Get access token
